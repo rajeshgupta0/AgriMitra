@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.output/
+.tanstack/
+.vite/
+.cache/
+
+.env
+.env.local
+
+.DS_Store
+Thumbs.db
+
+coverage/
+build/
+
+*.log
