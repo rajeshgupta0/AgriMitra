@@ -1,0 +1,218 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AgriMitra AI — Design System
+ *
+ * Voice-first, mobile-first, farmer-friendly.
+ * Warm earthy palette: deep field green + harvest amber + soil cream.
+ * Generous radii, large tap targets, calm motion.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-harvest: var(--harvest);
+  --color-harvest-foreground: var(--harvest-foreground);
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --font-display: "Plus Jakarta Sans", "Noto Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans", system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px oklch(0.2 0.04 150 / 0.04), 0 8px 24px oklch(0.2 0.04 150 / 0.06);
+  --shadow-float: 0 8px 32px oklch(0.35 0.12 150 / 0.18);
+  --shadow-glow: 0 0 0 8px oklch(0.55 0.18 150 / 0.12);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Cream/soil background */
+  --background: oklch(0.985 0.012 95);
+  --foreground: oklch(0.22 0.03 150);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 150);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 150);
+
+  /* Deep field green */
+  --primary: oklch(0.48 0.14 152);
+  --primary-foreground: oklch(0.99 0.01 95);
+  --primary-soft: oklch(0.94 0.04 152);
+
+  --secondary: oklch(0.96 0.02 95);
+  --secondary-foreground: oklch(0.28 0.04 150);
+
+  --muted: oklch(0.95 0.015 95);
+  --muted-foreground: oklch(0.5 0.025 150);
+
+  --accent: oklch(0.93 0.05 80);
+  --accent-foreground: oklch(0.28 0.04 150);
+
+  /* Harvest amber */
+  --harvest: oklch(0.78 0.16 70);
+  --harvest-foreground: oklch(0.22 0.04 60);
+
+  /* Monsoon sky */
+  --sky: oklch(0.7 0.12 230);
+  --sky-foreground: oklch(0.99 0.01 230);
+
+  --destructive: oklch(0.58 0.21 27);
+  --destructive-foreground: oklch(0.99 0.01 95);
+
+  --success: oklch(0.62 0.16 150);
+  --success-foreground: oklch(0.99 0.01 95);
+
+  --warning: oklch(0.78 0.16 70);
+  --warning-foreground: oklch(0.22 0.04 60);
+
+  --border: oklch(0.9 0.015 95);
+  --input: oklch(0.92 0.015 95);
+  --ring: oklch(0.55 0.16 152);
+
+  --chart-1: oklch(0.55 0.16 152);
+  --chart-2: oklch(0.78 0.16 70);
+  --chart-3: oklch(0.7 0.12 230);
+  --chart-4: oklch(0.62 0.18 30);
+  --chart-5: oklch(0.5 0.12 290);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 150);
+  --foreground: oklch(0.97 0.01 95);
+  --card: oklch(0.22 0.025 150);
+  --card-foreground: oklch(0.97 0.01 95);
+  --popover: oklch(0.22 0.025 150);
+  --popover-foreground: oklch(0.97 0.01 95);
+  --primary: oklch(0.7 0.16 152);
+  --primary-foreground: oklch(0.15 0.03 150);
+  --primary-soft: oklch(0.3 0.06 152);
+  --secondary: oklch(0.28 0.03 150);
+  --secondary-foreground: oklch(0.97 0.01 95);
+  --muted: oklch(0.26 0.025 150);
+  --muted-foreground: oklch(0.72 0.02 95);
+  --accent: oklch(0.3 0.05 80);
+  --accent-foreground: oklch(0.97 0.01 95);
+  --harvest: oklch(0.78 0.16 70);
+  --harvest-foreground: oklch(0.18 0.04 60);
+  --sky: oklch(0.7 0.12 230);
+  --sky-foreground: oklch(0.15 0.03 230);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.99 0.01 95);
+  --success: oklch(0.7 0.16 150);
+  --success-foreground: oklch(0.15 0.03 150);
+  --warning: oklch(0.78 0.16 70);
+  --warning-foreground: oklch(0.18 0.04 60);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.7 0.16 152);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    /* Subtle organic texture */
+    background-image:
+      radial-gradient(at 20% 0%, oklch(0.78 0.16 70 / 0.10) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, oklch(0.55 0.16 152 / 0.08) 0px, transparent 50%);
+    min-height: 100dvh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* === Custom utilities === */
+
+@utility gradient-field {
+  background-image: linear-gradient(135deg, oklch(0.48 0.14 152), oklch(0.6 0.16 140));
+}
+
+@utility gradient-harvest {
+  background-image: linear-gradient(135deg, oklch(0.82 0.16 75), oklch(0.72 0.18 55));
+}
+
+@utility gradient-dawn {
+  background-image: linear-gradient(180deg, oklch(0.92 0.08 80), oklch(0.96 0.04 95));
+}
+
+@utility tap-target {
+  min-height: 3rem;
+  min-width: 3rem;
+}
+
+@utility safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 1rem);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 oklch(0.55 0.18 152 / 0.5); }
+  70% { box-shadow: 0 0 0 24px oklch(0.55 0.18 152 / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(0.55 0.18 152 / 0); }
+}
+
+@utility animate-voice-pulse {
+  animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}

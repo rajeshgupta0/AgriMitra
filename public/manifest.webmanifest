@@ -1,0 +1,16 @@
+{
+  "name": "AgriMitra AI — Farming Companion",
+  "short_name": "AgriMitra",
+  "description": "Voice-first AI farming assistant for Indian farmers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8f5ec",
+  "theme_color": "#1f5b3a",
+  "categories": ["productivity", "education", "utilities"],
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
